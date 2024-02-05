@@ -1,20 +1,31 @@
 "use client";
-import React from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import NavBar from "./components/NavBar";
+import React, { useEffect } from "react";
+import NavBar from "../components/NavBar";
+import ThreeD from "../components/3D";
+import Page1 from "../components/Page1.js";
+import Page2 from "../components/Page2";
+import Page3 from "../components/Page3";
+import Page4 from "../components/Page4";
+import gsap from "gsap";
 
 const page = () => {
+  useEffect(() => {
+    gsap.to(".custom-shadow", {
+      y: 25,
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+  });
   return (
-    <div className="min-h-screen w-full bg-slate-400">
+    <div className="min-h-screen w-full relative flex flex-col justify-center">
       <NavBar />
-      {/* <Canvas>
-        <mesh>
-          <torusKnotGeometry />
-          <meshStandardMaterial color="green"/>
-          <OrbitControls/>
-        </mesh>
-      </Canvas> */}
+      <ThreeD />
+      <Page1 />
+      <Page2 />
+      <Page3 />
+      <Page4 />
     </div>
   );
 };

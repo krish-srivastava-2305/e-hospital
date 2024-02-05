@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -13,21 +14,21 @@ function NavBar() {
   };
 
   return (
-    <nav className="w-full h-[6vw] flex justify-between items-center relative p-5 border-b-2 border-black">
+    <nav className="w-full h-[6vw] flex justify-between items-center sticky top-0 left-0 p-5 z-10">
       <div className="overflow-hidden h-full w-40">
         <motion.h1
           initial={{ x: 150 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.75 }}
-          className="font-semibold text-2xl m-4 nav-head"
+          className="font-semibold text-4xl m-4 nav-head text-[#181717c9]"
         >
-          The Hospital
+          MediTrek
         </motion.h1>
       </div>
       <div
         className={`h-[50vh] w-full box absolute ${
           isOpen ? "top-0" : "-top-[1500%]"
-        } left-0 flex bg-blue-950 duration-1000 ease-in-out p-5`}
+        } left-0 flex bg-[#C37973] duration-1000 ease-in-out p-5`}
       >
         <motion.div
           initial={{ scale: 0 }}
@@ -41,7 +42,7 @@ function NavBar() {
             <li className="relative w-[8vw] h-14 overflow-hidden flex flex-col max-[640px]:w-[25vw]">
               <a
                 href="/"
-                className="text-5xl max-[640px]:text-[6vw] bg-black text-white after:absolute after:h-[2px] after:w-full after:bg-white after:top-[calc(100%-2px)] after:-left-full hover:after:left-0 after:duration-1000 after:ease-out home"
+                className="text-5xl max-[640px]:text-[6vw] bg-black text-[#181717c9] after:absolute after:h-[2px] after:w-full after:bg-[#181717c9] after:top-[calc(100%-2px)] after:-left-full hover:after:left-0 after:duration-1000 after:ease-out home"
                 onMouseEnter={() => {
                   const a = document.querySelector(".home .p1");
                   const b = document.querySelector(".home .p2");
@@ -63,7 +64,7 @@ function NavBar() {
             <li className="relative w-[13vw] max-[640px]:w-[25vw] h-14 overflow-hidden flex flex-col">
               <a
                 href="/"
-                className="text-5xl max-[640px]:text-[6vw] bg-black text-white after:absolute after:h-[2px] after:w-full after:bg-white after:top-[calc(100%-2px)] after:-left-full hover:after:left-0 after:duration-1000 after:ease-out meds"
+                className="text-5xl max-[640px]:text-[6vw] bg-black text-[#181717c9] after:absolute after:h-[2px] after:w-full after:bg-[#181717c9] after:top-[calc(100%-2px)] after:-left-full hover:after:left-0 after:duration-1000 after:ease-out meds"
                 onMouseEnter={() => {
                   const a = document.querySelector(".meds .p1");
                   const b = document.querySelector(".meds .p2");
@@ -87,7 +88,7 @@ function NavBar() {
             <li className="relative w-[11vw] h-14 overflow-hidden flex flex-col max-[640px]:w-[25vw]">
               <a
                 href="/"
-                className="text-5xl max-[640px]:text-[6vw] bg-black text-white after:absolute after:h-[2px] after:w-full after:bg-white after:top-[calc(100%-2px)] after:-left-full hover:after:left-0 after:duration-1000 after:ease-out Doctors"
+                className="text-5xl max-[640px]:text-[6vw] bg-black text-[#181717c9] after:absolute after:h-[2px] after:w-full after:bg-[#181717c9] after:top-[calc(100%-2px)] after:-left-full hover:after:left-0 after:duration-1000 after:ease-out Doctors"
                 onMouseEnter={() => {
                   const a = document.querySelector(".Doctors .p1");
                   const b = document.querySelector(".Doctors .p2");
@@ -109,7 +110,7 @@ function NavBar() {
             <li className="relative w-[12vw] h-14 overflow-hidden flex flex-col max-[640px]:w-[25vw]">
               <a
                 href="/"
-                className="text-5xl max-[640px]:text-[6vw] bg-black text-white after:absolute after:h-[2px] after:w-full after:bg-white after:top-[calc(100%-2px)] after:-left-full hover:after:left-0 after:duration-1000 after:ease-out Contacts"
+                className="text-5xl max-[640px]:text-[6vw] bg-black text-[#181717c9] after:absolute after:h-[2px] after:w-full after:bg-[#181717c9] after:top-[calc(100%-2px)] after:-left-full hover:after:left-0 after:duration-1000 after:ease-out Contacts"
                 onMouseEnter={() => {
                   const a = document.querySelector(".Contacts .p1");
                   const b = document.querySelector(".Contacts .p2");
@@ -132,12 +133,12 @@ function NavBar() {
           </ul>
         </div>
       </div>
-      <div className="relative h-6 w-9 overflow-hidden self-end menu justify-self-end">
+      <div className="relative h-6 w-12 overflow-hidden self-end menu justify-self-end">
         <button
-          className={`${
-            isOpen ? "text-white" : "text-black"
+          className={`text-xl ${
+            isOpen ? "text-[#181717c9]" : "text-[#1d1c1cde]"
           } after:absolute after:h-[2px] after:w-full ${
-            isOpen ? "after:bg-white" : "after:bg-black"
+            isOpen ? "after:bg-[#181717c9]" : "after:bg-[#242424e0]"
           } after:top-[calc(100%-2px)] after:-left-full hover:after:left-0 after:duration-1000 after:ease-out home -z-8`}
           onClick={isOpen ? closeMenu : giveMenu}
         >

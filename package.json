@@ -14,9 +14,12 @@
     "@types/three": "^0.161.2",
     "framer-motion": "^11.0.3",
     "gsap": "^3.12.5",
+    "lamina": "^1.1.23",
+    "leva": "^0.9.35",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-intersection-observer": "^9.6.0",
     "three": "^0.161.0"
   },
   "devDependencies": {
