@@ -4,7 +4,7 @@ import { Environment, Lightformer } from "@react-three/drei";
 
 const Intro = () => {
   return (
-    <div className="h-[calc(500vh+6vw)] w-full absolute top-0 left-0 -z-10">
+    <div className="h-[calc(525vh+6vw)] w-full absolute top-0 left-0 -z-10">
       <Canvas>
         <Icosahedron></Icosahedron>
         <group>

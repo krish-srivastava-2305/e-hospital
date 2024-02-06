@@ -16,19 +16,19 @@ function Page4() {
       </div>
       <div className="h-2/3 w-full flex justify-evenly gap-16 items-center p-6">
         <Card
-          src={"/Medicines"}
+          src={"../app/Medicines"}
           img={
             "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?q=80&w=1937&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           }
         />
         <Card
-          src={"/Appoinments"}
+          src={"../app/Appoinments"}
           img={
             "https://images.unsplash.com/photo-1622902046580-2b47f47f5471?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           }
         />
         <Card
-          src={"/KnowUs"}
+          src={"../app/KnowUs"}
           img={
             "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           }
